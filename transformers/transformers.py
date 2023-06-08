@@ -1,26 +1,15 @@
 from transformers import pipeline
 
+# 加载文本摘要模型 
 summarizer = pipeline("summarization")
-results = summarizer(
-    """
-    America has changed dramatically during recent years. Not only has the number of 
-    graduates in traditional engineering disciplines such as mechanical, civil, 
-    electrical, chemical, and aeronautical engineering declined, but in most of 
-    the premier American universities engineering curricula now concentrate on 
-    and encourage largely the study of engineering science. As a result, there 
-    are declining offerings in engineering subjects dealing with infrastructure, 
-    the environment, and related issues, and greater concentration on high 
-    technology subjects, largely supporting increasingly complex scientific 
-    developments. While the latter is important, it should not be at the expense 
-    of more traditional engineering.
 
-    Rapidly developing economies such as China and India, as well as other 
-    industrial countries in Europe and Asia, continue to encourage and advance 
-    the teaching of engineering. Both China and India, respectively, graduate 
-    six and eight times as many traditional engineers as does the United States. 
-    Other industrial countries at minimum maintain their output, while America 
-    suffers an increasingly serious decline in the number of engineering graduates 
-    and a lack of well-educated engineers.
-    """
-)
-print(results)
+# 长文本
+long_text = """
+这是一段非常长的文本，包含了大量的内容。在压缩文本时，我们希望将这段长文本缩减为短文本摘要，保留其中的关键信息，同时减少冗余和重复内容。这样做可以提供一个简洁的概述，使人们更容易理解和获取文本的主要要点。使用transformers库中的pipeline可以轻松实现这一目标。
+"""
+
+# 对长文本进行摘要
+short_summary = summarizer(long_text, max_length=50, min_length=10, do_sample=False)[0]['summary_text']
+
+print("原文本：\n", long_text)
+print("\n摘要：\n", short_summary)
