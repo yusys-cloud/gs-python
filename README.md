@@ -8,3 +8,18 @@
 ```
 pip freeze > requirements.txt
 ```
+
+```
+nohup ./auto-run --path=../gs-python/conf/run-starcoder.json &
+nohup ./auto-run --path=../gs-python/conf/run-chatglm-6b.json &
+```
+
+##  ChatGLM-6B
+pip install protobuf==3.20.0 transformers==4.27.1 icetk cpm_kernels
+
+## venv
+python3 -m venv venv
+source venv/bin/activate
+
+## 错误处理
+- requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer')) 重试多次可自动模型下载

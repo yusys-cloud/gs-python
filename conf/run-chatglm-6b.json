@@ -1,0 +1,19 @@
+{
+    "name": "run-chatglm-6b",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/gs-python/llms && source ../venv3.10/bin/activate && python chatglm.py",
+        "retry": {
+          "condition": [
+            "OSError: We couldn't connect to 'https://huggingface.co'",
+            "OSError: We couldn't connect to",
+            "ConnectionResetError",
+            "ConnectionError",
+            "EnvironmentError",
+            "Read timed out"
+          ],
+          "times": 100
+        }
+      }
+    ]
+  }

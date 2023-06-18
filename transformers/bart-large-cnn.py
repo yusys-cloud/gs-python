@@ -1,4 +1,7 @@
 from transformers import pipeline
+import os
+
+os.environ['PY_OPENSSL_SYSTEM_CERTS'] = '1'
 
 summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
 
