@@ -1,0 +1,16 @@
+{
+    "name": "git-lfs-models-starcoder",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf starcoder && git clone https://huggingface.co/bigcode/starcoder",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

@@ -1,0 +1,16 @@
+{
+    "name": "git-lfs-models-chatglm2-6b",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf chatglm2-6b && git clone https://huggingface.co/THUDM/chatglm2-6b",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

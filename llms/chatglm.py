@@ -8,14 +8,17 @@
 # response, history = model.chat(tokenizer, "你好", history=[])
 # print(response)
 
+pretrained_model_name_or_path= "/home/ubuntu/yzq/models/chatglm-6b"
+# pretrained_model_name_or_path="THUDM/chatglm-6b"
+
 from transformers import AutoTokenizer, AutoModel
 # tokenizer = AutoTokenizer.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True)
-tokenizer = AutoTokenizer.from_pretrained("/home/ubuntu/yzq/models/chatglm-6b/tokenizer", trust_remote_code=True)
-# tokenizer.save_pretrained("/home/ubuntu/yzq/models/chatglm-6b/tokenizer")
+tokenizer = AutoTokenizer.from_pretrained(pretrained_model_name_or_path, trust_remote_code=True)
+tokenizer.save_pretrained(pretrained_model_name_or_path)
 
 # model = AutoModel.from_pretrained("THUDM/chatglm-6b", trust_remote_code=True).half().cuda()
-model = AutoModel.from_pretrained("/home/ubuntu/yzq/models/chatglm-6b/models",trust_remote_code=True).half().cuda()
-# model.save_pretrained("/home/ubuntu/yzq/models/chatglm-6b/models")
+model = AutoModel.from_pretrained(pretrained_model_name_or_path,trust_remote_code=True).half().cuda()
+model.save_pretrained(pretrained_model_name_or_path)
 
 response, history = model.chat(tokenizer, "你好，介绍下go功能特点", history=[])
 print(response)

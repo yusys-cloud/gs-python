@@ -1,0 +1,17 @@
+{
+    "name": "run-localGPT",
+    "steps": [
+      {
+        "cmd": "conda activate py310 && cd /home/ubuntu/yzq/localGPT2 && python run_localGPT.py",
+        "retry": {
+          "condition": [
+            "OSError: We couldn't connect to 'https://huggingface.co'",
+            "OSError: We couldn't connect to",
+            "ConnectionResetError",
+            "ConnectionError"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

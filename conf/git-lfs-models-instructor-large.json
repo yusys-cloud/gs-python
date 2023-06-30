@@ -1,0 +1,16 @@
+{
+    "name": "git-lfs-models-instructor-large",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf instructor-large && git clone https://huggingface.co/hkunlp/instructor-large",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

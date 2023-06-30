@@ -1,0 +1,16 @@
+{
+    "name": "git-lfs-models-WizardLM-7B-uncensored-GPTQ",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf WizardLM-7B-uncensored-GPTQ && git clone https://huggingface.co/TheBloke/WizardLM-7B-uncensored-GPTQ",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }
