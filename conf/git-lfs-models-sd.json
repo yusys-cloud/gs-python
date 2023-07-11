@@ -1,0 +1,16 @@
+{
+    "name": "git-lfs-models-stable-diffusion",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/stable-diffusion-webui/models/Stable-diffusion  && git clone https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.safetensors",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

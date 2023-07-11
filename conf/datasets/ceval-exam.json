@@ -1,0 +1,17 @@
+{
+    "name": "ceval-exam",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/datasets && rm -rf ceval-exam.zip && curl -LO https://huggingface.co/datasets/ceval/ceval-exam/blob/main/ceval-exam.zip",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed",
+            "Connection reset by peer"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

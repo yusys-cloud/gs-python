@@ -2,6 +2,10 @@
 提供了数以千计的预训练模型，支持 100 多种语言的文本分类、信息抽取、问答、摘要、翻译、文本生成。它的宗旨是让最先进的 NLP 技术人人易用
 
 - [用 BART 做文本摘要](./transformers/bart-large-cnn.py)
+- [transformers演示](https://github.com/huggingface/transformers/blob/main/README_zh-hans.md)
+
+## ChatGLM
+[web_demo](./llms/chatglm/web_demo.py) 
 
 ## Snippets
 

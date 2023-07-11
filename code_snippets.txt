@@ -1,0 +1,12 @@
+2
+2
+2
+2
+233
+/*Given a string s, count the number of uppercase vowels in even indices.For example:countUpper('aBCdEf') returns 1countUpper('abcdefg') returns 0countUpper('dBBE') returns 0*/const countUpper = (s) => {
+/*Given a string s, count the number of uppercase vowels in even indices.For example:countUpper('aBCdEf') returns 1countUpper('abcdefg') returns 0countUpper('dBBE') returns 0*/const countUpper = (s) => {
+/*Given a string s, count the number of uppercase vowels in even indices.For example:countUpper('aBCdEf') returns 1countUpper('abcdefg') returns 0countUpper('dBBE') returns 0*/const countUpper = (s) => {
+2
+2
+public static int add(int a, int b) {return a + b;}
+public static int add(int a, int b) {return a + b;}
