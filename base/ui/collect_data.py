@@ -35,4 +35,4 @@ iface = gr.Interface(
 )
 
 # iface.launch()
-iface.launch(auth=("m", "m"),server_port=7866)
+iface.launch(auth=("a", "a"),server_port=7866)

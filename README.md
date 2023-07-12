@@ -8,10 +8,16 @@
 [web_demo](./llms/chatglm/web_demo.py) 
 
 ## Snippets
-
 ```
 pip freeze > requirements.txt
+
+//huggingface-cli
+export HUGGINGFACE_TOKEN=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
+huggingface-cli login --token $HUGGINGFACE_TOKEN
 ```
+
+## huggingface
+
 
 ```
 nohup ./auto-run --path=../gs-python/conf/run-starcoder.json &
