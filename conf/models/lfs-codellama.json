@@ -2,7 +2,7 @@
     "name": "git-lfs-models-codellama",
     "steps": [
       {
-        "cmd": "cd /home/ubuntu/yzq/models && rm -rf codellama && git clone https://huggingface.co/codellama/CodeLlama-7b-hf",
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf codellama && git clone https://huggingface.co/codellama/CodeLlama-7b-Instruct-hf",
         "retry": {
           "condition": [
             "fatal: unable to access",
