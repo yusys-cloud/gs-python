@@ -1,0 +1,16 @@
+{
+    "name": "git-lfs-models-codellama",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf codellama && git clone https://huggingface.co/codellama/CodeLlama-7b-hf",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }

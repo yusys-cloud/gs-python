@@ -1,0 +1,16 @@
+{
+    "name": "m3e-base",
+    "steps": [
+      {
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf m3e-base && git clone https://huggingface.co/moka-ai/m3e-base",
+        "retry": {
+          "condition": [
+            "fatal: unable to access",
+            "Clone succeeded, but checkout failed",
+            "gnutls_handshake() failed"
+          ],
+          "times": 10000
+        }
+      }
+    ]
+  }
