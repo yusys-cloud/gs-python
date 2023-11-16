@@ -2,7 +2,7 @@ import re
 import requests
 
 # 发起GET请求
-url = 'http://api/api/search'
+url = 'http:///api/search'
 params = {
     'b': 'logs',
     'k': 'sww',
@@ -16,14 +16,12 @@ data = response.json()
 
 # 提取时间和内容
 result = []
-items = data['data']['items']
-for item in items:
-    k = item['k']
-    v = item['v']
+items = data['items']
+for v in items:
     time = v['time']
     content = v['msg']
 
-    msg = item['v']['msg']
+    msg = v['msg']
     match = re.search(r'\[(.*?)\]', msg)
     if match:
         number = match.group(1)

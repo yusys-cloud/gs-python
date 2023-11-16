@@ -1,8 +1,8 @@
 {
-    "name": "git-lfs-models-chatglm2-6b",
+    "name": "git-lfs-models-chatglm3-6b",
     "steps": [
       {
-        "cmd": "cd /home/ubuntu/yzq/models && rm -rf chatglm2-6b && git clone https://huggingface.co/THUDM/chatglm2-6b",
+        "cmd": "cd /home/ubuntu/yzq/models && rm -rf chatglm2-6b && git clone https://www.modelscope.cn/ZhipuAI/chatglm3-6b.git",
         "retry": {
           "condition": [
             "fatal: unable to access",

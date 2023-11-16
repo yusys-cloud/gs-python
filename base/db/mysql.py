@@ -52,6 +52,6 @@ def execute_insert_statements(sql_statements):
 create_database('demo')
 
 # 读取SQL文件中的INSERT INTO语句并执行插入
-sql_file = '/home/ubuntu/yzq/xd-20230707.sql'
+sql_file = '/home/ubuntu/xd-20230707.sql'
 insert_statements = read_sql_file(sql_file)
 execute_insert_statements(insert_statements)
