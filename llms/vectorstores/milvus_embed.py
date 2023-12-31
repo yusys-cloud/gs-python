@@ -12,14 +12,13 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 # from pymilvus import Milvus
 
 def get_embeddingModel():
-    # model_name = "BAAI/gte-large-zh"
-    model_name = '/home/ubuntu/yzq/models/m3e-base'
-    model_kwargs = {'device': 'cuda'}
-    encode_kwargs = {'normalize_embeddings': True} # set True to compute cosine similarity
+   
+    
     model = HuggingFaceBgeEmbeddings(
-        model_name=model_name,
-        model_kwargs=model_kwargs,
-        encode_kwargs=encode_kwargs,
+         # model_name = "BAAI/gte-large-zh"
+        model_name='/home/ubuntu/yzq/models/m3e-base',
+        model_kwargs = {'device': 'cuda'},
+        encode_kwargs = {'normalize_embeddings': True}, # set True to compute cosine similarity
         query_instruction="为这个句子生成表示以用于检索相关文章："
     )
     return model
@@ -49,7 +48,6 @@ def main():
     #     connection_args={"host": "n3", "port": "19530"},
     # )
 
-    # 检索存储的集合
     vector_db = Milvus(
         embeddings,
         connection_args={"host": "n3", "port": "19530"},
