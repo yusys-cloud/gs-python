@@ -7,7 +7,8 @@ Python学习Demo.
 - [使用 PyTorch 和 DeepSpeed(training, inference, compression, benchmarks, and applications that use DeepSpeed) 训练屏蔽语言模型](./deepspeed/)
 - [一种快速、经济实惠、可扩展且开放的系统框架，可实现端到端强化学习人类反馈 (RLHF) 培训体验，从而生成各种规模的高质量 ChatGPT 式模型。]
 - [ChatGLM web_demo](./llms/chatglm/web_demo.py) 
-- [GPU信息查看](./base/gpu_info.py) 
+- [GPU信息查看](./base/gpu_info.py)
+- [Embedding API服务](./rag/rag/indexing/embed/embed_api.py) 
 - [emdedding](./llms/embedding/) 嵌入创建一段文本的矢量表示，我们可以在向量空间中思考文本，并执行语义搜索之类的操作，在向量空间中查找最相似的文本片段。
     - [Embeddings 两种方法：嵌入文档与嵌入查询](./llms/embedding/text_embeddings.py)。 前者采用多个文本作为输入，而后者采用单个文本。 将它们作为两种单独方法的原因是，某些嵌入提供程序对文档（要搜索的）与查询（搜索查询本身）有不同的嵌入方法。
     - Text embedding models
@@ -19,6 +20,11 @@ Python学习Demo.
     - 检索器使用语义相似性和时间衰减的组合。
 - [基础文本处理](./base/)
     - [javalang对java进行AST处理](./base/ast/java_method.py)
+- [vector database milvus](./rag/rag/indexing/store/hello_milvus.py)
+    - 主键可以指定或者默认，主键可以重复,通过主键删除数据
+    - Fields组成 entities. 可以是结构化数据 (numbers, strings) or vectors.
+    - embedding vector is an array of floating-point numbers or binaries
+- [LangChain]
 
 ## Snippets
 ```

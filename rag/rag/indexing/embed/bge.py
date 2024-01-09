@@ -6,13 +6,13 @@
 from langchain.embeddings import HuggingFaceBgeEmbeddings
 from langchain.vectorstores import Milvus
 
-from rag.constants import MILVUS_CONNECTION_ARGS
+from rag.constants import MILVUS_CONNECTION_ARGS,EMBEDDING_MODEL_NAME
 
-def get_model():
+def get_model() -> HuggingFaceBgeEmbeddings:
     model = HuggingFaceBgeEmbeddings(
-        model_name='/home/ubuntu/yzq/models/bge-large-zh',
+        model_name= EMBEDDING_MODEL_NAME,
         model_kwargs = {'device': 'cuda'},
-        encode_kwargs = {'normalize_embeddings': True}, # set True to compute cosine similarity
+        encode_kwargs = {'normalize_embeddings': True,"device": "cuda"}, # set True to compute cosine similarity
     )
     return model
 
@@ -35,3 +35,13 @@ def save_chunks2vector(all_splits,collection_name):
     # )
      
      return milvus_store
+
+
+def main():
+    hf = get_model()
+    ls = hf.embed_documents(['我的','ads哈哈','你好'])
+    print(len(ls))
+
+
+if __name__ == '__main__':
+    main()

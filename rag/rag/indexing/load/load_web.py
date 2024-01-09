@@ -6,8 +6,9 @@
 
 from langchain.document_loaders import TextLoader,WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from loguru import logger
 
-loader = WebBaseLoader('https://python.langchain.com/docs/modules/data_connection/')
+loader = WebBaseLoader('https://docs.spring.io/spring-security/site/docs/5.3.0.RELEASE/reference/html5/#authz-hierarchical-roles')
 
 text_splitter = RecursiveCharacterTextSplitter(
     # Set a really small chunk size, just to show.
@@ -19,5 +20,7 @@ text_splitter = RecursiveCharacterTextSplitter(
 
 docs=loader.load_and_split(text_splitter)
 
-print(len(docs))
+logger.info(len(docs))
+
+# logger.info(docs[10].page_content())
 

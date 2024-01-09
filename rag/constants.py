@@ -21,6 +21,7 @@ DOCUMENT_LOADERS_MAP = {
 }
 
 MILVUS_CONNECTION_ARGS= {"host": "n3", "port": "19530"}
+EMBEDDING_MODEL_NAME = '/home/ubuntu/yzq/models/bge-large-zh'
 
 def main():
     
